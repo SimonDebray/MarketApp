@@ -1,11 +1,36 @@
 <form>
 	<label>
-		Product name:
+		Product Name:
 	</label>
-	<input type="text" ng-model="productAdd.product.name" />
+	<select ng-model="productAdd.product.name">
+		<option ng-repeat="option in productAdd.selections" value="{{option.id}}">{{option.name}}</option>
+	</select>
 	<label>
 		Description:
 	</label>
 	<input type="text" ng-model="productAdd.product.description" />
-	<button ng-click="productAdd.submit()">Add Party!</button>
+	<label>
+		Quantité:
+	</label>
+	<input type="number" ng-model="productAdd.product.quantite" />
+	<label>
+		Unité:
+	</label>
+	<select ng-model="productAdd.product.unite">
+		<option value="kilo">Kilo</option>
+		<option value="litre">Litre</option>
+		<option value="unite">Unité</option>
+	</select>
+	<label>
+		Prix unitaire:
+	</label>
+	<input type="number" ng-model="productAdd.product.prix" />
+	<label>
+		Unité:
+	</label>
+	<label>
+		Bio:
+	</label>
+	<input type="checkbox" ng-model="productAdd.product.bio" />
+	<button ng-click="productAdd.submit()">Add product!</button>
 </form>

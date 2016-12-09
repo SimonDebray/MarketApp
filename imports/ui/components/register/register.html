@@ -1,0 +1,37 @@
+<form>
+	<label>
+		Email:
+	</label>
+	<input type="email" ng-model="register.users.email">
+	<label>
+		Mot de passe :
+	</label>
+	<input type="password" ng-model="register.users.password">
+	<label>
+		Confirmer le mot de passe :
+	</label>
+	<input type="password" ng-model="register.users.passwordConfirmed">
+	<label>
+		Nom de vendeur:
+	</label>
+	<input type="text" ng-model="register.users.username">
+	<label>
+		Nom:
+	</label>
+	<input type="text" ng-model="register.users.profile.name">
+	<label>
+		Prénom:
+	</label>
+	<input type="text" ng-model="register.users.profile.firstname">
+	<label>
+		Adresse de récupération:
+	</label>
+	<input ng-model="register.address" type="text">
+	<button ng-click="register.geocodePlaceId(register.theMap,register.geocoder,register.address, register.users)">Localisation</button>
+
+	<input type="submit" ng-click="register.register()" value="Register">
+</form>
+
+
+
+<div style="height: 300px" id="map"></div>
